@@ -1,0 +1,327 @@
+/*
+ * AwesomeTTS text-to-speech add-on website
+ * Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+html { font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif }
+
+header, main, nav, article, figure, figcaption, footer { display: block }
+
+header p, #turf, article, #plat { font-size: 87.5% }
+h1 { font-size: 200% }
+h2 { font-size: 150% }
+h3 { font-size: 100% }
+hr { border-top: dotted 1px; margin: 20px 0 }
+
+footer { font-size: 75% }
+
+main, footer {
+    a[rel~=external]:before { content: '\21d7\00a0' }
+}
+#plat a[rel~=external]:after { content: '\00a0\21d7' }
+
+main {
+    a[rel~=parent]:before { content: '\21e7\00a0' }
+    a[rel~=home]:before { content: '\2605\00a0' }
+    a[rel~=child]:before { content: '\00a7\00a0' }
+    a[rel~=prev]:before { content: '\21e6\00a0' }
+    a[rel~=next]:after { content: '  \21e8\00a0' }
+
+    article li a[rel~=parent]:only-child:before { content: none }
+}
+
+
+@mixin columns($count) {
+    column-count: $count;
+    -moz-column-count: $count;
+    -webkit-column-count: $count;
+}
+
+$blue: #08c;
+$gray: #333;
+$ocean: #005580;  // n.b. also used as foreground for figure-loader.gif
+$sky: #c0deed;
+$white: #fff;  // n.b. also used as background for figure-loader.gif
+
+$xPadding: 20px;
+$yPadding: 10px;
+
+$fixedWidthAfter: 1400px;
+
+@media screen {
+    html {
+        background: $sky;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: $white;
+        color: $gray;
+        margin: 0 auto;
+        max-width: $fixedWidthAfter;
+        padding: 0;
+
+        :first-child { margin-top: 0 }
+        :last-child { margin-bottom: 0 }
+    }
+
+    a {
+        color: $blue;
+        text-decoration: none;
+
+        &:hover { color: $ocean }
+    }
+
+    header, footer {
+        background: $gray;
+
+        &, a, a:hover { color: $white }
+    }
+
+    header {
+        line-height: 1.0;
+        padding: $yPadding 0;
+        text-align: center;
+
+        * { margin: 0 }
+    }
+
+    nav * {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #turf, article h1, #plat { line-height: 1.1 }
+
+    #turf {
+        padding: $yPadding 0 0;
+        text-align: center;
+
+        li {
+            display: inline;
+
+            &:before { content: ' ' }
+            &:first-child:before { content: none }
+        }
+
+        a {
+            padding: 0 $xPadding/5;
+            white-space: nowrap;
+        }
+    }
+
+    article {
+        padding: $yPadding $xPadding $yPadding*2;
+
+        * { margin-top: 0 }
+
+        h2, h3 { margin-bottom: 0 }
+
+        ul.cols { @include columns(2) }
+
+        pre {
+            background: $gray;
+            border: solid 5px $ocean;
+            border-radius: 5px;
+            color: $white;
+            padding: 1em;
+            overflow: auto;
+        }
+    }
+
+    figure {
+        background: $ocean;
+        border-radius: 5px;
+        margin: $yPadding auto;
+        max-width: 90%;
+        padding: 5px;
+
+        &, a, a:hover { color: $white }
+
+        img {
+            background: url('figure-loader.gif') center no-repeat;
+            display: block;
+            height: auto;
+            max-width: 100%;
+            min-height: 100px;
+        }
+    }
+
+    figcaption {
+        font-style: italic;
+        line-height: 1.1;
+        padding: $yPadding $xPadding - 5px $yPadding - 5px;
+        text-align: center;
+
+        a { text-decoration: underline }
+    }
+
+    table {
+        background: $gray;
+        border-collapse: collapse;
+        margin: 0 0 1em;
+        white-space: nowrap;
+        width: 100%;
+
+        &, a { color: $white }
+
+        tr {
+            border-top: solid 1px;
+
+            &:first-child { border-top: none }
+        }
+
+        td { padding: $yPadding/2 $xPadding/2 }
+    }
+
+    div.grid {
+        padding: 0 0 $yPadding;
+
+        figure { margin: $yPadding auto 0 }
+    }
+
+    div.scroll {
+        margin: 0 0 1em;
+        overflow-x: auto;
+    }
+
+    article:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+
+    #dive {
+        border-top: dotted 1px;
+        line-height: 1.4;
+        margin: 0 $xPadding;
+        padding: $yPadding 0 $yPadding*2;
+
+        li {
+            display: block;
+            padding: $yPadding 0 0;
+        }
+    }
+
+    #plat { display: none }
+
+    footer {
+        padding: $yPadding $xPadding;
+
+        a { text-decoration: underline }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        background: $gray url('/logo.png') no-repeat $xPadding center;
+        padding-left: 64px + $xPadding * 2;
+        text-align: left;
+    }
+
+    main {
+        float: right;
+        width: 75%;
+    }
+
+    #turf {
+        text-align: right;
+
+        a { padding: 0 $xPadding }
+    }
+
+    article {
+        padding-left: 0;
+
+        ul.cols { @include columns(3) }
+    }
+
+    figure {
+        clear: right;
+        float: right;
+        margin: 0 0 1em 1em;
+        max-width: 60%;
+    }
+
+    div.grid {
+        float: left;
+        width: 100%;
+
+        figure {
+            margin: $yPadding 0 0;
+            max-width: 48%;
+
+            &:nth-child(odd) {
+                clear: left;
+                float: left;
+
+                &:last-child {
+                    float: none;
+                    margin: 0 auto 1em;
+                    position: relative;
+                    top: 1em;
+                }
+            }
+
+            &:nth-child(even) {
+                clear: right;
+                float: right;
+            }
+        }
+    }
+
+    #dive { margin-left: 0 }
+
+    #plat {
+        display: block;
+        float: left;
+        padding: $yPadding 0 $yPadding*2;
+        width: 20%;
+
+        li, a { display: block }
+
+        a[rel~=me] {
+            background: $ocean;
+            color: #fff;
+        }
+
+        h1 { display: none }
+        h2 { margin-top: $yPadding }
+        h2, a { padding: $yPadding/5 $xPadding }
+
+        ul ul { padding-left: $xPadding }
+    }
+
+    footer { clear: both }
+}
+
+@media screen and (min-width: 1100px) {
+    article ul.cols { @include columns(4) }
+}
+
+@media screen and (min-width: $fixedWidthAfter) {
+    html { overflow-y: scroll }
+}
+
+@media print {
+    a { color: inherit }
+
+    nav { display: none }
+
+    article ul.cols { @include columns(2) }
+}

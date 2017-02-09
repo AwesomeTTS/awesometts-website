@@ -1,0 +1,59 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<figure style="width: 608px">
+    <img src="/services.rhvoice.png" width="608" height="426"
+      alt="AwesomeTTS note editor dialog with the RHVoice service activated">
+
+    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the RHVoice
+      service activated</figcaption>
+</figure>
+
+<p><a href="https://github.com/Olga-Yakovleva/RHVoice"
+  rel="external">RHVoice</a> is a free and open source speech synthesizer for
+  Russian, Georgian, English, and Esperanto.</p>
+
+<h2>Windows Users</h2>
+
+<p>If using the installer package, most Windows users will actually use the
+  RHVoice service via the <a href="/services/sapi5">Microsoft Speech API</a>
+  rather than direct access.</p>
+
+<h2>Linux Users</h2>
+
+<p>On Linux, AwesomeTTS must be able to find the <code>RHVoice-client</code>
+  binary in your system <code>$PATH</code> <em>and</em> be able to discover
+  the list of installed voices. To find the voices, AwesomeTTS will search
+  <code>~/share/RHVoice/voices</code>, <code>~/usr/share/RHVoice/voices</code>,
+  <code>/usr/local/share/RHVoice/voices</code>, then finally
+  <code>/usr/share/RHVoice/voices</code>.</p>
+
+<p>Additionally, if the RHVoice service is not already running, AwesomeTTS
+  will try to start it directly by calling <code>RHVoice-service</code>.</p>
+
+<h2>Options</h2>
+
+<p>When using RHVoice directly, <strong>speed</strong>,
+  <strong>pitch</strong>, and <strong>volume</strong> can be adjusted.</p>
+
+<p>If you are accessing RHVoice via the Microsoft Speech API on Windows, then
+  <strong>pitch</strong> will not be available.</p>
+
+{{> below}}

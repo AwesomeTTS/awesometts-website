@@ -1,0 +1,88 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<p>You can use AwesomeTTS to just add or update audio files one-by-one.</p>
+
+<p>This method, along with the <a href="browser" rel="next">card browser
+  method</a>, will store the generated audio files with your Anki collection,
+  inserting <code>[sound]</code> tags into your note fields. These tags are
+  understood natively by all versions of Anki, and once generated can be
+  played back even without AwesomeTTS. If you do not study outside of the
+  desktop version of Anki, the <a href="on-the-fly">on-the-fly method</a>
+  or the on-demand <a href="presets">presets method</a> might be easier.</p>
+
+<h2>Instructions</h2>
+
+<ol>
+    <li>From the note editor, activate the input field to which you would like
+      to add the audio <samp>[sound]</samp> tag.</li>
+    <li>Click the speaker icon in the toolbar.</li>
+    <li>Select your desired service and configure any options.</li>
+    <li>Confirm that the input phrase is correct.</li>
+    <li>Click &ldquo;Preview&rdquo; to confirm that your audio is as you would
+      like it to sound.</li>
+    <li>Click &ldquo;Record&rdquo; to insert the audio clip in the field.</li>
+</ol>
+
+<h3>Hints</h3>
+
+<ul>
+    <li>AwesomeTTS will automatically populate the input field of the note
+      editor dialog with whatever was already in the active note field when
+      you opened the dialog. If it was empty, AwesomeTTS will try to populate
+      the input field with whatever is in the system clipboard. The options
+      you set on the <a href="/config/text">Text tab of the configuration
+      screen</a> will apply to this.</li>
+    <li><a href="removing">Mass removal of audio can be done via the card
+      browser</a> later if you decide you do not like the audio you have
+      added to a set of notes.</li>
+    <li>The default keyboard shortcut to launch AwesomeTTS from the note
+      editor dialog is <kbd>Ctrl+T</kbd> (or <kbd>Cmd+T</kbd> on Mac OS X),
+      which overrides the default Anki shortcut key for LaTeX. If you want to
+      restore the LaTeX shortcut key, you can <a href="/config/windows">change
+      this in AwesomeTTS&rsquo;s window configuration</a>.</li>
+</ul>
+
+<h3>Screenshots</h3>
+
+<div class="grid">
+    <figure style="width: 644px">
+        <img src="/usage.editor.button.png" width="644" height="440"
+          alt="Mouse hovers the speaker toolbar icon in the note editor">
+
+        <figcaption>Note editor AwesomeTTS button</figcaption>
+    </figure>
+
+    <figure style="width: 644px">
+        <img src="/usage.editor.screen.png" width="644" height="440"
+          alt="Mouse hovers &ldquo;Record&rdquo; button">
+
+        <figcaption>Recorder dialog</figcaption>
+    </figure>
+
+    <figure style="width: 644px">
+        <img src="/usage.editor.yield.png" width="644" height="440"
+          alt="Note seen with a new [sound] tag in one of the input fields">
+
+        <figcaption>Note afterward</figcaption>
+    </figure>
+</div>
+
+{{> below}}

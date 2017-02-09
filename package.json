@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "1.0.2",
+    "grunt-contrib-htmlmin": "2.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-gae": "maciejzasada/grunt-gae#69371677a5c136981fb6f8618c2f9bb1cf6628f5",
+    "grunt-json-minify": "1.1.0",
+    "grunt-mustache-render": "1.9.2",
+    "grunt-replace": "1.0.1",
+    "grunt-sass": "2.0.0"
+  },
+  "license": "AGPL-3.0",
+  "private": true
+}

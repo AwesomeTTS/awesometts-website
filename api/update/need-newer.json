@@ -1,0 +1,9 @@
+{
+    "auto": true,
+    "intro": "This is a services update.",
+    "notes": [
+      "removes services that no longer work"
+    ],
+    "update": true,
+    "version": "1.10.0"
+}

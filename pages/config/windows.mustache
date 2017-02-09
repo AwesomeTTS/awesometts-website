@@ -1,0 +1,76 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<figure style="width: 534px">
+    <img src="/config.windows.png" width="534" height="573"
+      alt="AwesomeTTS configuration dialog with the Windows tab selected">
+
+    <figcaption>&ldquo;Windows&rdquo; configuration tab</figcaption>
+</figure>
+
+<p>The &ldquo;Windows&rdquo; tab allows the user to see and change the
+  shortcuts available to launch various windows throughout Anki while using
+  the add-on.</p>
+
+<p>AwesomeTTS comes installed by default with most windows responding to
+  <kbd>Ctrl+T</kbd> (or <kbd>Cmd+T</kbd> on Mac OS X), but users may be
+  interested in changing or removing a shortcut if there is a conflict with
+  another feature (e.g. LaTeX in the note editor) or installed add-on that
+  they use.</p>
+
+<h2>Available Window Shortcuts</h2>
+
+<ul>
+    <li><a href="/config" rel="parent">open configuration in main
+      window</a></li>
+    <li><a href="/usage/on-the-fly">insert <kbd>&lt;tts&gt;</kbd> tag in
+      template editor</a></li>
+    <li><a href="/usage/browser">mass generate MP3s in card browser</a></li>
+    <li><a href="/usage/removing">mass remove audio in card browser</a></li>
+    <li><a href="/usage/editor">generate single MP3 in note editor</a></li>
+</ul>
+
+<p>For all of these, clicking on the associated shortcut button and then
+  striking a key (e.g. <kbd>F10</kbd>) or key combination (e.g.
+  <kbd>Ctrl+F10</kbd>) will change the shortcut used to open that window.</p>
+
+<h2>Additional Tips</h2>
+
+<ul>
+    {{! n.b. Some of these are present but reworded on the Playback tab. }}
+    <li>If you already have the card browser or an editor window open when
+      changing a shortcut, it will not take effect until the next time that
+      window is reopened.</li>
+    <li>Changing a shortcut to one that is already used by a native Anki
+      feature or already reserved by another add-on may not work, depending
+      on exactly what you set for what. Some experimentation may be necessary
+      to arrive at a comfortable configuration.</li>
+    <li>To unset an window shortcut altogether, you can click its button and
+      then strike either <kbd>Backspace</kbd> or <kbd>Delete</kbd>.</li>
+    <li>To set multiple shortcuts at the same time to the same key or key
+      combination, you can click both buttons and then strike your desired
+      shortcut once. All shortcuts will be set simultaneously.</li>
+    <li>While setting a shortcut, you can strike <kbd>Escape</kbd> to cancel
+      and revert back to what the shortcut was before you clicked the
+      button.</li>
+    <li>Some keys are reserved and cannot be used in shortcuts.</li>
+</ul>
+
+{{> below}}

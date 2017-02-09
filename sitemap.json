@@ -1,0 +1,125 @@
+{
+    "install": {
+        "terse": "Install",
+        "title": "Installation",
+        "what": "Prerequisites, how to download, keeping up-to-date, alternate versions and methods"
+    },
+
+    "services": {
+        "title": "Services",
+        "what": "General information and some additional hints for some locally-installed services",
+        "children": {
+            "ekho": {
+                "title": "Ekho",
+                "what": "Korean and several dialects of Chinese, Windows and Linux"
+            },
+            "espeak": {
+                "title": "eSpeak",
+                "what": "Bundled with many built-in languages, Windows and Linux"
+            },
+            "festival": {
+                "title": "Festival",
+                "what": "Bundled with English, other languages installable separately, Linux only"
+            },
+            "ispeech": {
+                "title": "iSpeech",
+                "what": "Paid API that offers access to high-quality voices in several languages"
+            },
+            "sapi5": {
+                "terse": "MS SAPI",
+                "title": "Microsoft Speech API (SAPI)",
+                "what": "Interface for desktop software to enable TTS playback, built into Windows"
+            },
+            "say": {
+                "terse": "OS X",
+                "title": "OS X Speech Synthesis Manager",
+                "what": "Many languages installable through System Preferences, built into Mac OS X"
+            },
+            "rhvoice": {
+                "title": "RHVoice",
+                "what": "Russian, Georgian, English, and Esperanto; Linux natively or Windows via SAPI"
+            },
+            "pico2wave": {
+                "title": "SVOX Pico",
+                "what": "Voice synthesizer used in the Android operating system"
+            }
+        }
+    },
+
+    "usage": {
+        "terse": "Usage",
+        "title": "Using the Add-on",
+        "what": "Enable on-the-fly playback, mass generate audio files, or add as you go",
+        "children": {
+            "editor": {
+                "terse": "Note Editor",
+                "title": "Storing MP3 Audio Files from the Note Editor",
+                "what": "Generate audio as you add or edit a note, files stored with collection"
+            },
+            "browser": {
+                "terse": "Card Browser",
+                "title": "Storing MP3 Audio Files from the Card Browser",
+                "what": "Mass generate audio for many cards at once, files stored with collection"
+            },
+            "on-the-fly": {
+                "terse": "On-the-Fly",
+                "title": "Enabling On-the-Fly Playback via Card Templates",
+                "what": "Quickly enable audio via your card templates, with no file synchronization"
+            },
+            "presets": {
+                "terse": "Presets",
+                "title": "Managing Service Presets and Speaking Selected Text",
+                "what": "Save a particular service configuration, then use it later for playback/recording"
+            },
+            "groups": {
+                "terse": "Groups",
+                "title": "Playback and Recording w/ Groups of Service Presets",
+                "what": "Create a list of different service configurations, then use it for randomized or first-success-wins playback/recording"
+            },
+            "removing": {
+                "terse": "Remove Audio",
+                "title": "Removing Audio via the Card Browser",
+                "what": "Remove [sound] tags or AwesomeTTS audio filenames for many cards at once"
+            }
+        }
+    },
+
+    "config": {
+        "terse": "Config",
+        "title": "Configuration and Tweaking",
+        "what": "Set automatic playback, shortcut keys, text handling, MP3 generation, and more",
+        "children": {
+            "playback": {
+                "terse": "Playback",
+                "title": "Playback Configuration",
+                "what": "Set shortcut keys, enable or disable automatic playback, set automatic playback delays"
+            },
+            "text": {
+                "terse": "Text",
+                "title": "Text and Cloze Deletion Configuration",
+                "what": "Ignore certain text in playback or recording, tweak cloze deletion handling"
+            },
+            "mp3s": {
+                "terse": "MP3s",
+                "title": "MP3 Generation Configuration",
+                "what": "Change generated filenames, tune how the LAME transcoder gets called"
+            },
+            "windows": {
+                "terse": "Windows",
+                "title": "Window Configuration",
+                "what": "Change the shortcut keys used to open windows"
+            },
+            "advanced": {
+                "terse": "Advanced",
+                "title": "Advanced Configuration",
+                "what": "Setup presets and groups, check for updates, manage your cache"
+            }
+        }
+    },
+
+    "contribute": {
+        "terse": "Contribute",
+        "title": "Contributing to Development",
+        "what": "Report bugs, suggest features, submit code, test unreleased versions, rate us"
+    }
+}

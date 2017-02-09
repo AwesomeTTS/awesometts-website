@@ -1,0 +1,152 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<figure style="width: 534px">
+    <img src="/config.playback.png" width="534" height="573"
+      alt="AwesomeTTS configuration dialog with the Playback tab selected">
+
+    <figcaption>&ldquo;Playback&rdquo; configuration tab</figcaption>
+</figure>
+
+<p>The &ldquo;Playback&rdquo; tab allows the user to control some aspects of
+  how audio playback works with AwesomeTTS.</p>
+
+<h2>On-the-Fly vs. Stored Audio</h2>
+
+<p>Because AwesomeTTS operates in two different modes, there are two types of
+  audio playback possible: on-the-fly and stored. Users may have one or the
+  other, or they may have both.</p>
+
+<p>The <a href="/usage/on-the-fly">on-the-fly mode</a> is a unique feature of
+  AwesomeTTS, and Anki itself is not aware of its existence and assigns no
+  special meaning to the <samp>&lt;tts&gt;</samp> tags AwesomeTTS uses. Its
+  functionality is controlled exclusively from this screen.</p>
+
+<p>Audio added through the <a href="/usage/browser">card browser</a> or
+  <a href="/usage/editor">note editor</a>, on the other hand, is stored in the
+  collection&rsquo;s media library and then inserted into the notes as
+  <samp>[sound]</samp> tags. Anki <em>is</em> aware of these, and as such,
+  remains in control of whether they are automatically played as well as the
+  shortcut keys available to play them manually (<kbd>R</kbd> or
+  <kbd>F5</kbd>). AwesomeTTS, however, is able to add delays to these stored
+  sound files just like it can add delays to on-the-fly audio.</p>
+
+<h2>Questions / Fronts of Cards</h2>
+
+<ul>
+    <li><strong>Automatically play on-the-fly <code>&lt;tts&gt;</code>
+      tags:</strong> If checked, AwesomeTTS will playback any
+      <code>&lt;tts&gt;</code> tag found on the front side of your
+      card&rsquo;s template when initially displaying the card. <strong>Show
+      errors</strong> controls whether AwesomeTTS will alert you about errors
+      that occur from automatic on-the-fly playback.</li>
+
+    <li><strong>Wait <samp>&hellip; seconds</samp> before automatically
+      playing <samp>&hellip;</samp> tags:</strong> If set to a positive value
+      and automatic playback is enabled, AwesomeTTS will insert a delay before
+      any audio tags of the specified type found on the front side of the card
+      are automatically played.</li>
+
+    <li><strong>To manually play on-the-fly <code>&lt;tts&gt;</code> tags,
+      strike <samp>&hellip;</samp>:</strong> Clicking this and then striking a
+      key (e.g. <kbd>F3</kbd>) or key combination (e.g. <kbd>Ctrl+F11</kbd>)
+      will change the shortcut that AwesomeTTS listens for to playback any
+      <code>&lt;tts&gt;</code> tag found on the front side of your
+      card&rsquo;s template. This shortcut is always available when a card is
+      displayed that has a front <code>&lt;tts&gt;</code> tag. This shortcut
+      does <em>not</em> affect stored sounds.</li>
+</ul>
+
+<h2>Answers / Backs of Cards</h2>
+
+<ul>
+    <li><strong>Automatically play on-the-fly <code>&lt;tts&gt;</code>
+      tags:</strong> If checked, AwesomeTTS will playback any
+      <code>&lt;tts&gt;</code> tag found on the back side of your card&rsquo;s
+      template once you reveal the answer to the card. <strong>Show
+      errors</strong> controls whether AwesomeTTS will alert you about errors
+      that occur from automatic on-the-fly playback.</li>
+
+    <li><strong>Wait <samp>&hellip; seconds</samp> before automatically
+      playing <samp>&hellip;</samp> tags:</strong> If set to a positive value
+      and automatic playback is enabled, AwesomeTTS will insert a delay before
+      any audio tags of the specified type found on the back side of the card
+      are automatically played.</li>
+
+    <li><strong>To manually play on-the-fly <code>&lt;tts&gt;</code> tags,
+      strike <samp>&hellip;</samp>:</strong> Clicking this and then striking a
+      key (e.g. <kbd>F4</kbd>) or key combination (e.g. <kbd>Ctrl+F12</kbd>)
+      will change the shortcut that AwesomeTTS listens for to playback
+      any <code>&lt;tts&gt;</code> tag found on the back side of your
+      card&rsquo;s template. This shortcut is only available once the answer
+      to a card has been revealed and that answer template has a
+      <code>&lt;tts&gt;</code> tag. This shortcut does <em>not</em> affect
+      stored sounds.</li>
+</ul>
+
+{{=<%disable mustache%>=}}
+
+<p>Note that when Anki reveals the answer for a card, it renders both sides of
+  the card. For the purposes of differentiating the two sides of the cards,
+  AwesomeTTS looks for either the same text that appeared on the question side
+  (i.e. via the use of the <code>{{FrontSide}}</code> tag) or use of the card
+  divider (i.e. the default <code>&lt;hr id=answer&gt;</code> tag that Anki
+  includes by default for new note types).</p>
+
+<%disable={{ }}=mustache%>
+
+<h2>Additional Tips</h2>
+
+<ul>
+    {{! n.b. Some of these are present but reworded on the Windows tab. }}
+    <li>If you want to customize how AwesomeTTS handles cloze deletions or
+      text wrapped in parentheses, brackets, or braces, go to the
+      <a rel="next" href="/config/text">Text tab</a> for those settings.</li>
+    <li>To unset an on-the-fly shortcut altogether, you can click its button
+      and then strike either <kbd>Backspace</kbd> or <kbd>Delete</kbd>.</li>
+    <li>You may set both on-the-fly shortcuts to the same key or key
+      combination, in which case AwesomeTTS will read <code>&lt;tts&gt;</code>
+      tags from <em>either</em> side of the card, if they exist and are
+      visible.</li>
+    <li>You may set both or either shortcuts to <kbd>R</kbd> or <kbd>F5</kbd>,
+      which are keys Anki uses for its own playback. AwesomeTTS will have Anki
+      play any stored sounds before playback of any <code>&lt;tts&gt;</code>
+      tags.</li>
+    <li>To set both on-the-fly shortcuts at the same time to the same key or
+      key combination, you can click both buttons and then strike your desired
+      shortcut once. All shortcuts will be set simultaneously.</li>
+    <li>While setting a shortcut, you can strike <kbd>Escape</kbd> to cancel
+      and revert back to what the shortcut was before you clicked the
+      button.</li>
+    <li>Some keys are reserved and cannot be used in shortcuts.</li>
+    <li>If multiple pieces of audio are queued for automatic playback at the
+      same time (i.e. for a card side more than one <samp>&lt;tts&gt;</samp>
+      and/or <samp>[sound]</samp> tags), AwesomeTTS will use the delay setting
+      for the first one in the queue.</li>
+    <li>If you strike the shortcut to manually play a sound, it will be played
+      immediately without a delay unless other sounds are waiting in queue
+      (including any delays imposed by an automatic playback).</li>
+    <li>If you have unchecked <strong>Show errors</strong> for automatic
+      playback but would like to know why a particular card&rsquo;s audio is
+      not working, any manually-trigger playback (e.g. shortcut key or context
+      menu) will display the error.</li>
+</ul>
+
+{{> below}}

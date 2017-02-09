@@ -1,0 +1,69 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-config" content="none">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" sizes="16x16 32x32"
+      type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
+
+    <title>
+        {{#isHome}}
+            AwesomeTTS: Easily add text-to-speech to your Anki cards
+        {{/isHome}}{{^isHome}}
+            {{me.title}} &mdash; AwesomeTTS for Anki
+        {{/isHome}}
+    </title>
+</head>
+<body>
+    <header>
+        <h1>{{{helpers.masthead}}}</h1>
+        <p>Easily add text-to-speech to your Anki cards</p>
+    </header>
+
+    <main>
+        {{#isDynamic}}
+            <nav id="turf">
+                {{{helpers.home}}}
+            </nav>
+        {{/isDynamic}}
+
+        {{#isInterior}}
+            <nav id="turf">
+                <ul>
+                    <li>{{{helpers.home}}}</li>
+                    {{#parent}}<li>{{{helpers.link}}}</li>{{/parent}}
+                    {{#prev}}<li>{{{helpers.link}}}</li>{{/prev}}
+                    {{#next}}<li>{{{helpers.link}}}</li>{{/next}}
+                </ul>
+            </nav>
+        {{/isInterior}}
+
+        <article>
+            {{#isHome}}
+                <h1>About AwesomeTTS</h1>
+            {{/isHome}}{{^isHome}}
+                <h1>{{me.title}}</h1>
+            {{/isHome}}

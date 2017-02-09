@@ -1,0 +1,54 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<p>The &ldquo;MP3s&rdquo; tab allows the user to manage how to name generated
+  audio files that are stored with the collection, how the
+  <a href="http://lame.sourceforge.net" rel="external">LAME transcoder</a>
+  is invoked and how to rate limit online services.</p>
+
+<h2>Filenames of MP3s Stored in Your Collection</h2>
+
+<p>By default, AwesomeTTS will generate a unique filename for every word and
+  service/option combination that you use with the add-on. These unique
+  filenames are repeatable, portable, and safe to use across all software and
+  file systems, but they are not human-readable.</p>
+
+<p>If you would like to try using human-readable filenames instead, you may
+  change the dropdown here to &ldquo;human-readable&rdquo;.</p>
+
+<h2>LAME Transcoder</h2>
+
+<p>AwesomeTTS uses <a href="http://lame.sourceforge.net"
+  rel="external">LAME</a> to transcode from raw audio formats to MP3s, which
+  are stored on the file system for both playback and recording.</p>
+
+<p>If you are a power user, you can specify exactly which flags will be passed
+  to LAME here. See the <a rel="external"
+  href="http://lame.cvs.sourceforge.net/viewvc/lame/lame/USAGE">LAME command
+  line usage guide</a> for what flags are available.</p>
+
+<p>Note that changing this option does <em>not</em> retroactively affect old
+  MP3s that are already generated, including those in the cache and those that
+  may already be stored in your collection. Depending on the nature of your
+  change to the flags, you may want to regenerate collection MP3s or you may
+  want to <a href="advanced">clear your cache</a> for the flags to take full
+  effect.</p>
+
+{{> below}}

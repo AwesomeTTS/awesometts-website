@@ -1,0 +1,46 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<h2>General Information</h2>
+
+<ul>
+    <li>Some services only support a limited vocabulary. You may want to use
+      such services as <a href="/usage/groups">part of a service group</a> so
+      that you can fallback to another service.</li>
+    <li>Mass generation of MP3s using the <a href="/usage/browser">tool in the
+      Card Browser</a> is rate-limited for most services. Be a good Internet
+      citizen and moderate your usage of shared public resources.</li>
+</ul>
+
+<h2>Local Software</h2>
+
+<p>When you first open an AwesomeTTS audio generation dialog during an Anki
+  session, AwesomeTTS will try to automatically detect if you have any
+  supported TTS software installed locally. If you do not see a particular
+  service listed in the &ldquo;generate using&rdquo; dropdown menu, then
+  AwesomeTTS either did not detect it or cannot communicate with it.</p>
+
+<p>Note that if you decide to install new software to use with AwesomeTTS and
+  Anki is already running, you may need to restart Anki before AwesomeTTS will
+  see the newly-installed software. If after restarting, AwesomeTTS still does
+  not detect your local TTS software, <a href="/contribute">please report
+  it</a>.</p>
+
+{{> below}}

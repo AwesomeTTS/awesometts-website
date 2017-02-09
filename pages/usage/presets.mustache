@@ -1,0 +1,107 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+{{> above}}
+
+<p>If you only want to occasionally play certain text back, you may want to
+  setup AwesomeTTS with some of your favorite services and voices, and then do
+  playback on-demand via a context menu.</p>
+
+<p>This and the <a href="on-the-fly" rel="prev">on-the-fly method</a> are best
+  for users who only need TTS playback while using the desktop version of Anki
+  with AwesomeTTS installed. Users who use Anki on mobile devices (e.g. with
+  AnkiDroid) or on AnkiWeb may want to instead store <code>[sound]</code> tags
+  via the <a href="editor">note editor</a> or <a href="browser">card
+  browser</a> methods.</p>
+
+<h2>Instructions</h2>
+
+<ol>
+    <li>From the <a href="/config/advanced">Advanced tab</a> of the AwesomeTTS
+      <a href="/config">configuration window</a>, find the &ldquo;Service
+      Presets and Groups&rdquo; section and click &ldquo;Manage
+      Presets&rdquo;.</li>
+    <li>Select the service you want to use and configure any options.</li>
+    <li>Type a sample phrase and then click &ldquo;Preview&rdquo; to confirm
+      that your audio is as you would like it to sound.</li>
+    <li>Click &ldquo;Save&rdquo;.</li>
+    <li>Enter a name or accept the default name based on the service and voice
+      names, and click &ldquo;Okay&rdquo;.</li>
+    <li>Exit the management window and configuration window.</li>
+    <li>Navigate in Anki to the review mode.</li>
+    <li>Select some text.</li>
+    <li>Side-click the text to reveal the context menu.</li>
+    <li>Click &ldquo;AwesomeTTS&rdquo;.</li>
+    <li>Click the playback preset to hear the audio.</li>
+</ol>
+
+<h3>Hints</h3>
+
+<ul>
+    <li>Alternatively, instead of through the Configuration window, you can
+      manage service presets from any AwesomeTTS window with the left-hand
+      services panel.</li>
+    <li>There is an &ldquo;AwesomeTTS&rdquo; option available on the context
+      menus elsewhere in Anki, such as in the individual note fields in the
+      note editor and the preview panes of the card layout editor.</li>
+    <li>In review mode, the same options are available under the
+      &ldquo;More&rdquo; button.</li>
+    <li>Once you have setup at least two service presets, you can configure
+      <a href="groups" rel="next">groups of these presets</a>, which allows
+      for some advanced playback/recording scenarios.</li>
+    {{=<%disable mustache%>=}}
+        <li>Presets can also be used in the <a href="on-the-fly">on-the-fly
+          playback mode</a>, which may be helpful if you want to specify which
+          service configuration to use via a template field, e.g.:
+          <kbd>&lt;tts&nbsp;preset="{{preset}}"&gt;{{text}}&lt;/tts&gt;</kbd></li>
+    <%disable={{ }}=mustache%>
+</ul>
+
+<h3>Screenshots</h3>
+
+<div class="grid">
+    <figure style="width: 608px">
+        <img src="/usage.presets.config.png" width="608" height="418"
+          alt="Mouse hovers the Manage Presets button in Configuration">
+
+        <figcaption>&ldquo;Manage&rdquo; button for Presets</figcaption>
+    </figure>
+
+    <figure style="width: 608px">
+        <img src="/usage.presets.screen.png" width="608" height="418"
+          alt="Mouse hovers &ldquo;Record&rdquo; button">
+
+        <figcaption>Manage Service Presets dialog</figcaption>
+    </figure>
+
+    <figure style="width: 608px">
+        <img src="/usage.presets.save.png" width="608" height="418"
+          alt="Note seen with a new [sound] tag in one of the input fields">
+
+        <figcaption>Naming the service preset</figcaption>
+    </figure>
+
+    <figure style="width: 608px">
+        <img src="/usage.presets.yield.png" width="608" height="418"
+          alt="Note seen with a new [sound] tag in one of the input fields">
+
+        <figcaption>Context menu during review</figcaption>
+    </figure>
+</div>
+
+{{> below}}

@@ -1,0 +1,15 @@
+.[eE][nN][vV]*/
+.[vV][eE][nN][vV]*/
+.[vV][iI][rR][tT][uU][aA][lL][eE][nN][vV]*/
+[eE][nN][vV]*/
+[vV][eE][nN][vV]*/
+[vV][iI][rR][tT][uU][aA][lL][eE][nN][vV]*/
+__pycache__/
+*.db
+*.log
+*.py[cod]
+
+/build/
+/node_modules/
+/.grunt-gae-pid
+/keys.json

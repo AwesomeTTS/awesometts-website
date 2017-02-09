@@ -1,0 +1,93 @@
+{{!
+  ! AwesomeTTS text-to-speech add-on website
+  ! Copyright (C) 2014-Present  Anki AwesomeTTS Development Team
+  !
+  ! This program is free software: you can redistribute it and/or modify
+  ! it under the terms of the GNU Affero General Public License as
+  ! published by the Free Software Foundation, either version 3 of the
+  ! License, or (at your option) any later version.
+  !
+  ! This program is distributed in the hope that it will be useful,
+  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ! GNU Affero General Public License for more details.
+  !
+  ! You should have received a copy of the GNU Affero General Public License
+  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  !}}
+
+        </article>
+
+        {{#isParent}}
+            <nav id="dive">
+                <ul>
+                    {{#children}}
+                        <li>{{{helpers.child}}}</li>
+                    {{/children}}
+                </ul>
+            </nav>
+        {{/isParent}}
+    </main>
+
+    <nav id="plat">
+        <h1>Sitemap</h1>
+
+        <ul>
+            <li><a href="/"
+              {{#isHome}}rel="home index me"{{/isHome}}
+              {{^isHome}}
+                  {{#parent}}rel="home index"{{/parent}}
+                  {{^parent}}rel="home index parent"{{/parent}}
+              {{/isHome}}
+            >Home</a></li>
+
+            {{#sitemap}}
+                <li>
+                    {{{helpers.link}}}
+
+                    {{#isParent}}
+                        <ul>
+                            {{#children}}
+                                <li>{{{helpers.link}}}</li>
+                            {{/children}}
+                        </ul>
+                    {{/isParent}}
+                </li>
+            {{/sitemap}}
+        </ul>
+
+        <h2>Help</h2>
+
+        <ul>
+            <li><a href="https://anki.tenderapp.com/discussions/add-ons"
+              rel="discussion external">Anki Add-on Support Forum</a></li>
+        </ul>
+
+        <h2>More</h2>
+
+        <ul>
+            <li><a href="https://ankiweb.net/shared/info/301952613"
+              rel="external">AwesomeTTS on AnkiWeb</a></li>
+
+            <li><a href="https://github.com/AwesomeTTS"
+              rel="external">AwesomeTTS on GitHub</a></li>
+        </ul>
+    </ul></nav>
+
+    <footer>
+        <p>Need help? Visit the <a rel="discussion external"
+          href="https://anki.tenderapp.com/discussions/add-ons">Anki Add-On
+          Support Forum</a>.</p>
+
+        <p>AwesomeTTS is free and open-source software.<br>
+          The add-on code that runs within Anki is released under the
+          <a rel="external" href="https://www.gnu.org/licenses/gpl-3.0">GNU
+          GPL v3</a>, and first-party web code is released under the
+          <a rel="external" href="https://www.gnu.org/licenses/agpl-3.0">GNU
+          AGPL v3</a>.<br>
+          For more or to obtain source code, visit the <a rel="external"
+          href="https://github.com/AwesomeTTS">AwesomeTTS GitHub
+          organization</a>.</p>
+    </footer>
+</body>
+</html>
