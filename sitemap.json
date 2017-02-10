@@ -2,7 +2,7 @@
     "install": {
         "terse": "Install",
         "title": "Installation",
-        "what": "Prerequisites, how to download, keeping up-to-date, alternate versions and methods"
+        "what": "Prerequisites and how to download"
     },
 
     "services": {
