@@ -1,7 +1,7 @@
 # AwesomeTTS website
 
 AwesomeTTS makes it easy for language-learners and other students to add
-speech to their personal [Anki](http://ankisrs.net) card decks.
+speech to their personal [Anki](https://apps.ankiweb.net) card decks.
 
 The website provides documentation and help for current and prospective users
 of AwesomeTTS, in addition to hosting some limited APIs for use from the
