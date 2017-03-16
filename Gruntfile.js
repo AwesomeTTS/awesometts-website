@@ -525,11 +525,12 @@ module.exports = function (grunt) {
             // @tbd We might need to distinguish between the 2.0 and 2.1
             // releases of Anki in the future.
             {url: '/api/update/2\\.\\d+\\.\\d+-[a-z\\d]+-' + gaeRegex([
-                '1.10.0',
+                '1.11.0',
               ]),
               static_files: 'api/update/good-version.json',
               upload: 'api/update/good-version\\.json'},
             {url: '/api/update/2\\.\\d+\\.\\d+-[a-z\\d]+-' + gaeRegex([
+                '1.11.0-dev', '1.10.0',
                 '1.10.0-pre', '1.10.0-dev', '1.9.0', '1.9.0-pre', '1.9.0-dev',
               ]),
               static_files: 'api/update/need-newer.json',
