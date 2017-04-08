@@ -1,5 +1,5 @@
 {
     "/config/on-the-fly": "/config/playback",
-    "/services/sapi5com": "/services/sapi5"
+    "/services/sapi5com": "/services/sapi5",
     "/services/sapi5js": "/services/sapi5"
 }
