@@ -1,10 +1,4 @@
 {
-    "install": {
-        "terse": "Install",
-        "title": "Installation",
-        "what": "Prerequisites and how to download"
-    },
-
     "services": {
         "title": "Services",
         "what": "General information and some additional hints for some locally-installed services",
