@@ -57,14 +57,8 @@ def api(environ, start_response):
 
     else:
         start_response('404 Not Found', api.headers)
-
-        if path.startswith(api.update_path):
-            error("Unrecognized add-on version; returning 404 error JSON")
-            return api.update_response404
-
-        else:
-            error("Nothing suitable; returning 404 error JSON")
-            return api.response404
+        error("Nothing suitable; returning 404 error JSON")
+        return api.response404
 
 api.headers = [('Content-Type', 'application/json')]
 
@@ -75,9 +69,6 @@ api.json = lambda message: [json.dumps(
 )]
 
 api.response404 = api.json("No such endpoint")
-
-api.update_path = '/api/update/'
-api.update_response404 = api.json("Installation not recognized")
 
 
 
